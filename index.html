@@ -3,34 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noah Cwinski — Caddie</title>
+  <title>Noah Winski — Caddie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Noah Cwinski</h1>
-    <p class="tagline">Experienced Caddie · Available for Hire</p>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="#" class="logo" aria-label="Noah Winski">
+      <span class="logo-initials">NW</span>
+    </a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>Placeholder — add Noah's background here.</p>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Available for Hire</p>
+        <h1 class="hero-name">Noah<br>Winski</h1>
+        <p class="hero-title">Caddie</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-placeholder">
+          <svg viewBox="0 0 220 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Head -->
+            <circle cx="110" cy="58" r="36" fill="#5790A1" opacity="0.7"/>
+            <!-- Body -->
+            <path d="M68 160 Q70 110 110 108 Q150 110 152 160 L158 260 L130 260 L110 190 L90 260 L62 260 Z" fill="#5790A1" opacity="0.7"/>
+            <!-- Golf bag -->
+            <rect x="148" y="130" width="28" height="90" rx="6" fill="#EBAA20" opacity="0.8"/>
+            <rect x="152" y="118" width="20" height="16" rx="4" fill="#EBAA20" opacity="0.9"/>
+            <!-- Clubs sticking out -->
+            <line x1="158" y1="118" x2="155" y2="88" stroke="#B6C9D2" stroke-width="3" stroke-linecap="round"/>
+            <line x1="163" y1="118" x2="163" y2="86" stroke="#B6C9D2" stroke-width="3" stroke-linecap="round"/>
+            <line x1="168" y1="118" x2="171" y2="88" stroke="#B6C9D2" stroke-width="3" stroke-linecap="round"/>
+            <!-- Strap -->
+            <path d="M148 148 Q128 160 130 180" stroke="#B6C9D2" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <!-- Ground line -->
+            <line x1="30" y1="280" x2="190" y2="280" stroke="#738754" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+          <p class="placeholder-label">Photo Coming Soon</p>
+        </div>
+      </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>Placeholder — courses, seasons, notable loops.</p>
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="section-inner">
+        <div class="section-label">About</div>
+        <div class="about-grid">
+          <div class="about-text">
+            <h2>Focused. Reliable.<br>Ready to Work.</h2>
+            <p>
+              Noah Winski is a dedicated young caddie with a genuine love for the game and
+              a strong work ethic on every loop. Known for staying composed under pressure
+              and reading the course with care, Noah brings energy, attentiveness, and a
+              positive attitude to every round he works.
+            </p>
+            <p>
+              Whether carrying for a weekend golfer or supporting a competitive player,
+              Noah takes the role seriously — tracking distances, managing the bag, and
+              keeping pace without distraction. He's dependable, punctual, and
+              coachable, and he takes pride in making every round run smoothly.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Seasons Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Rounds Caddied</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Home Course</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Placeholder — email or contact form.</p>
+    <!-- EXPERIENCE -->
+    <section class="experience" id="experience">
+      <div class="section-inner">
+        <div class="section-label light">Experience</div>
+        <h2>On the Bag</h2>
+        <div class="experience-grid">
+          <div class="exp-card">
+            <div class="exp-icon">⛳</div>
+            <h3>Course Knowledge</h3>
+            <p>Familiar with multiple local courses, including their yardages, hazards, and greens. Prepared with a yardage book and able to help with club selection.</p>
+          </div>
+          <div class="exp-card">
+            <div class="exp-icon">🏌️</div>
+            <h3>Bag Management</h3>
+            <p>Keeps clubs clean, organized, and ready. Knows the difference between an 18-hole loop and a walking 9 — and brings the same focus to both.</p>
+          </div>
+          <div class="exp-card">
+            <div class="exp-icon">🗺️</div>
+            <h3>Reading the Course</h3>
+            <p>Helps with green reads and pin positions. Comfortable talking through shots with players who want input, or stepping back for those who prefer to focus.</p>
+          </div>
+          <div class="exp-card">
+            <div class="exp-icon">🤝</div>
+            <h3>Professionalism</h3>
+            <p>Arrives early, dressed appropriately, and ready to work. Understands pace of play, etiquette, and what it means to be a trustworthy partner on the course.</p>
+          </div>
+        </div>
+
+        <div class="courses">
+          <h3>Courses Worked</h3>
+          <ul class="course-list">
+            <li>Course Name — Location <span class="course-note">(placeholder)</span></li>
+            <li>Course Name — Location <span class="course-note">(placeholder)</span></li>
+            <li>Course Name — Location <span class="course-note">(placeholder)</span></li>
+          </ul>
+        </div>
+      </div>
     </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <div class="section-label light">Contact</div>
+        <h2>Hire Noah</h2>
+        <p class="contact-intro">
+          Interested in booking Noah for a round? Reach out directly — he's available
+          on weekends and during the season. Serious inquiries only, please.
+        </p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-type">Email</span>
+            <a href="mailto:noah@placeholder.com" class="contact-value">noah@placeholder.com</a>
+          </div>
+          <div class="contact-divider"></div>
+          <div class="contact-item">
+            <span class="contact-type">Phone</span>
+            <a href="tel:+10000000000" class="contact-value">(000) 000-0000</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Noah Cwinski</p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-logo">
+      <span class="logo-initials small">NW</span>
+      <span class="footer-name">Noah Winski</span>
+    </div>
+    <p class="footer-copy">&copy; 2026 Noah Winski · Caddie</p>
   </footer>
 
   <script src="main.js"></script>
