@@ -297,6 +297,16 @@ section h2 {
   letter-spacing: -0.01em;
 }
 
+.stat-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-decoration: none;
+}
+
+.stat-link:hover .stat-number { color: var(--moss); }
+.stat-link:hover .stat-label  { color: var(--moss); }
+
 /* === EXPERIENCE === */
 .experience {
   background: var(--steel);
