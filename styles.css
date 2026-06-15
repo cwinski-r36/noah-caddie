@@ -164,36 +164,27 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   background: var(--steel-dark);
   position: relative;
+  overflow: hidden;
 }
 
 .hero-image::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(115,135,84,0.15) 0%, rgba(87,144,161,0.1) 100%);
-}
-
-.hero-image-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
+  background: linear-gradient(135deg, rgba(115,135,84,0.2) 0%, rgba(87,144,161,0.12) 100%);
   z-index: 1;
+  pointer-events: none;
 }
 
-.hero-image-placeholder svg {
-  width: 220px;
-  height: auto;
-  opacity: 0.9;
-}
-
-.placeholder-label {
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--steel-grey);
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 65%;
+  display: block;
+  z-index: 0;
 }
 
 /* === SHARED SECTION STYLES === */
@@ -230,9 +221,31 @@ section h2 {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 320px 1fr;
   gap: 4rem;
   align-items: start;
+}
+
+.about-photo {
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  position: sticky;
+  top: 5.5rem;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .about-text h2 { color: var(--steel); }
@@ -277,6 +290,11 @@ section h2 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--steel-grey);
+}
+
+.stat--home-course .stat-number {
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
 }
 
 /* === EXPERIENCE === */
@@ -359,6 +377,13 @@ section h2 {
   color: var(--steel-grey);
   font-style: italic;
 }
+
+.course-list a {
+  color: var(--ochre);
+  transition: color 0.2s;
+}
+
+.course-list a:hover { color: var(--ochre-light); }
 
 /* === CONTACT === */
 .contact {
@@ -475,7 +500,12 @@ section h2 {
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
+  }
+
+  .about-photo {
+    position: static;
+    aspect-ratio: 16 / 9;
   }
 
   .about-stats {
@@ -548,11 +578,8 @@ section h2 {
   .btn { align-self: center; }
 
   .hero-image {
-    padding: 2.5rem 2rem;
-    min-height: 280px;
+    min-height: 380px;
   }
-
-  .hero-image-placeholder svg { width: 160px; }
 
   .experience-grid { grid-template-columns: 1fr; }
 
@@ -570,6 +597,9 @@ section h2 {
   .section-inner { padding: 3.5rem 1.25rem; }
 
   section h2 { margin-bottom: 1.5rem; }
+
+  /* About photo landscape on mobile */
+  .about-photo { aspect-ratio: 4 / 3; }
 
   /* About stats go single column */
   .about-stats {
@@ -592,12 +622,7 @@ section h2 {
   /* Hero adjustments */
   .hero-content { padding: 3rem 1.25rem 2.5rem; }
 
-  .hero-image {
-    padding: 2rem 1.25rem;
-    min-height: 220px;
-  }
-
-  .hero-image-placeholder svg { width: 120px; }
+  .hero-image { min-height: 300px; }
 
   /* Experience cards full-width padding */
   .exp-card { padding: 1.5rem; }
