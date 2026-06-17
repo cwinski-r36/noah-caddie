@@ -324,8 +324,16 @@ section h2 {
 .exp-card:hover { background: rgba(255,255,255,0.1); }
 
 .exp-icon {
-  font-size: 1.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
   margin-bottom: 1rem;
+  color: var(--ochre);
+}
+
+.exp-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .exp-card h3 {
